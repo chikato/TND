@@ -69,3 +69,16 @@
   font-size: $size;
   line-height: $height;
 }
+
+@mixin selectable($value: none) {
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin bg($url) {
+  background: url($url) no-repeat;
+  height: 100vh !important;
+  background-size: cover;
+}

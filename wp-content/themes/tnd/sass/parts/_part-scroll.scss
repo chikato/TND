@@ -1,0 +1,30 @@
+.scroll-down, .scroll-up {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  width: 150px;
+  @include translate(-50%, 0);
+  @include selectable(none);
+
+  .scroll-text {
+      text-transform: uppercase;
+  }
+
+  .scroll-icon {
+    background: url("../img/common/scroll_down_icon.png") no-repeat center center;
+    height: 50px;
+    background-size: 50px 50px;
+  }
+}
+
+.scroll-down {
+  .scroll-icon {
+
+  }
+}
+
+.scroll-up {
+  .scroll-icon {
+    @include transform(rotate(180deg));
+  }
+}

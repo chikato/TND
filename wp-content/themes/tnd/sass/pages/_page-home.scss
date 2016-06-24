@@ -1,15 +1,11 @@
-#section1 {
-  background: url("../img/content/home/bg1.jpg") no-repeat;
-}
-
-#section2 {
-  background: url("../img/content/home/bg2.jpg") no-repeat;
-}
-
-#section3 {
-  background: url("../img/content/home/bg3.jpg") no-repeat;
-}
-
-#section4 {
-  background: url("../img/content/home/bg4.jpg") no-repeat;
+.section {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+  }
 }

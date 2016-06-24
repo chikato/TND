@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Demo template
+ * Template Name: Page Content template
  *
  * @package WordPress
  * @subpackage Lse
@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <div class="block">
-    <h2>DEMO PAGE</h2>
+    <h2>CONTENT PAGE</h2>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="page-content">
             <?php the_content(); ?>
