@@ -52,6 +52,29 @@ function tnd_widgets_init() {
 }
 add_action( 'widgets_init', 'tnd_widgets_init' );
 
+function tnd_scripts() {
+    // add wordpress jquery
+    wp_enqueue_script('jquery');
+
+    $path = get_template_directory_uri();
+
+    // custom js
+    $scripts = array();
+    foreach ($scripts as $key => $url){
+        wp_enqueue_script( 'lse-script-'.$key, $path .  $url, array());
+    }
+
+    $styles = array();
+    foreach ($styles as $key => $url){
+        wp_enqueue_style( 'bs-style-'.$key, $path .  $url, array());
+    }
+
+    wp_enqueue_style( 'bs-style', get_stylesheet_uri() );
+
+}
+add_action( 'wp_enqueue_scripts', 'tnd_scripts' );
+
+
 ?>
 
 

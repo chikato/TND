@@ -15,10 +15,10 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> > <!--Thêm class tượng trưng cho mỗi trang lên <body> để tùy biến-->
+<body <?php body_class(); ?> >
 <div id="wrapper">
     <div class="page">
         <header>
-            <h1>TND Website</h1>
+            <h1>Mark E.Watson</h1>
         </header>
         <div id="main" class="clearfix">
