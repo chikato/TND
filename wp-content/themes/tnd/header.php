@@ -19,6 +19,5 @@
 <div id="wrapper">
     <div class="page">
         <header>
-            <h1>Mark E.Watson</h1>
         </header>
         <div id="main" class="clearfix">

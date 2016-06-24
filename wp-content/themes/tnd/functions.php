@@ -59,17 +59,22 @@ function tnd_scripts() {
     $path = get_template_directory_uri();
 
     // custom js
-    $scripts = array();
+    $scripts = array(
+        '/js/lib/jquery.fullPage.min.js',
+        '/js/app.js'
+    );
     foreach ($scripts as $key => $url){
         wp_enqueue_script( 'lse-script-'.$key, $path .  $url, array());
     }
 
-    $styles = array();
+    $styles = array(
+        '/css/jquery.fullPage.css'
+    );
     foreach ($styles as $key => $url){
-        wp_enqueue_style( 'bs-style-'.$key, $path .  $url, array());
+        wp_enqueue_style( 'tnd-style-'.$key, $path .  $url, array());
     }
 
-    wp_enqueue_style( 'bs-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'tnd-style', get_stylesheet_uri() );
 
 }
 add_action( 'wp_enqueue_scripts', 'tnd_scripts' );
