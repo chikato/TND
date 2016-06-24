@@ -82,3 +82,11 @@
   height: 100vh !important;
   background-size: cover;
 }
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

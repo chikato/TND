@@ -1,0 +1,18 @@
+.page {
+  >section:not(:first-child) {
+    z-index: 3;
+  }
+}
+
+.page-content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+
+  * {
+    color: #000;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+  }
+}

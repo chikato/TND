@@ -8,7 +8,7 @@
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1>mark e. watson iii</h1>
-                        <?php include "parts/_part-scroll-down.php" ?>
+                        <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1>executive</h1>
-                        <?php include "parts/_part-view-more.php" ?>
-                        <?php include "parts/_part-scroll-down.php" ?>
+                        <?php get_template_part("parts/part", "view-more"); ?>
+                        <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
@@ -31,8 +31,8 @@
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1>competitor</h1>
-                        <?php include "parts/_part-view-more.php" ?>
-                        <?php include "parts/_part-scroll-down.php" ?>
+                        <?php get_template_part("parts/part", "view-more"); ?>
+                        <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1>philanthropist</h1>
-                        <?php include "parts/_part-view-more.php" ?>
-                        <?php include "parts/_part-scroll-up.php" ?>
+                        <?php get_template_part("parts/part", "view-more"); ?>
+                        <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
