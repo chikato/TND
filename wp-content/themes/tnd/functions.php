@@ -35,7 +35,7 @@ if ( ! function_exists( 'tnd_setup' ) ) :
             'primary' => esc_html__( 'Primary', 'tnd' )
         ) );
     }
-    add_action ( 'init', 'tnd_Setup' );
+    add_action ( 'init', 'tnd_setup' );
 
 endif;
 

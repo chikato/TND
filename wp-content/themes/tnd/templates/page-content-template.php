@@ -12,7 +12,7 @@ get_header();
 <div class="block">
     <div id="fullpage" class="page">
         <section class="section">
-            <img data-src="<?php echo get_bloginfo('template_url').'/img/content/home/bg2.jpg'; ?>">
+            <?php echo get_the_post_thumbnail(); ?>
             <div class="mask fp-table">
                 <div class="fp-tableCell">
                     <div class="content">

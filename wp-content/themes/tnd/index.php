@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php get_template_part("parts/part", "menu"); ?>
 <div class="block">
     <div id="fullpage">
         <section class="section" id="section1">
@@ -7,48 +6,40 @@
             <div class="mask fp-table">
                 <div class="fp-tableCell">
                     <div class="content">
-                        <h1>mark e. watson iii</h1>
+                        <h1><?php echo get_bloginfo("name"); ?></h1>
                         <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
         </section>
+        <?php
+            $pages  = get_pages( array( 'sort_column' => 'menu_order' ) );
+            $length = count($pages);
+            $index = 0;
+            foreach ( $pages as $page ) {
+                $index++;
+        ?>
         <section class="section" id="section2">
-            <img data-src="<?php echo get_bloginfo('template_url').'/img/content/home/bg2.jpg'; ?>">
+            <?php echo get_the_post_thumbnail($page->ID, 'origin'); ?>
             <div class="mask fp-table">
                 <div class="fp-tableCell">
                     <div class="content">
-                        <h1>executive</h1>
-                        <?php get_template_part("parts/part", "view-more"); ?>
-                        <?php get_template_part("parts/part", "scroll-down"); ?>
+                        <h1><?php echo $page->post_title; ?></h1>
+                        <a class="view-more" href="<?php echo get_page_link( $page->ID ); ?>">
+                            <span class="view-more-label">VIEW MORE</span>
+                        </a>
+                        <?php
+                            if($index == $length) {
+                                get_template_part("parts/part", "scroll-up");
+                            } else {
+                                get_template_part("parts/part", "scroll-down");
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section" id="section3">
-            <img data-src="<?php echo get_bloginfo('template_url').'/img/content/home/bg3.jpg'; ?>">
-            <div class="mask fp-table">
-                <div class="fp-tableCell">
-                    <div class="content">
-                        <h1>competitor</h1>
-                        <?php get_template_part("parts/part", "view-more"); ?>
-                        <?php get_template_part("parts/part", "scroll-down"); ?>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="section4">
-            <img data-src="<?php echo get_bloginfo('template_url').'/img/content/home/bg4.jpg'; ?>">
-            <div class="mask fp-table">
-                <div class="fp-tableCell">
-                    <div class="content">
-                        <h1>philanthropist</h1>
-                        <?php get_template_part("parts/part", "view-more"); ?>
-                        <?php get_template_part("parts/part", "scroll-up"); ?>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php } ?>
     </div>
 </div>
 

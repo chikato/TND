@@ -2,9 +2,6 @@
     <button class="menu-icon"><span></span></button>
 </div>
 <div id="nav">
-<!--    <div class="nav-close">-->
-<!--        <button class="nav-icon"><span></span></button>-->
-<!--    </div>-->
     <div class="table-center">
         <?php
         wp_nav_menu( array(

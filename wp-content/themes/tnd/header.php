@@ -19,5 +19,6 @@
 <div id="wrapper">
     <div class="page">
         <header>
+            <?php get_template_part("parts/part", "menu"); ?>
         </header>
         <div id="main" class="clearfix">
