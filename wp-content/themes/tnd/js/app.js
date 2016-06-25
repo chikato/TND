@@ -27,9 +27,12 @@
                 //change navigation background when scrolling
                 onLeave: function (index, nextIndex, direction) {
                     var $nextSlide = $($(SECTION)[nextIndex - 1]);
-                    !$nextSlide.find(".mask").length ? $("#fp-nav span").css({
+                    !$nextSlide.find(".mask").length ?
+                        ($("#fp-nav span").css({
                         "background": "#333"
-                    }) : $("#fp-nav span").css({"background": ""});
+                    }), $menu.addClass("black-menu")) :
+                        ($("#fp-nav span").css({"background": ""}),
+                        $menu.removeClass("black-menu"));
                 }
             });
         },

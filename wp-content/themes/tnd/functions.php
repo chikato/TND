@@ -32,10 +32,13 @@ if ( ! function_exists( 'tnd_setup' ) ) :
             'default-image' => '',
         ) ) );
         register_nav_menus( array(
-            'primary' => esc_html__( 'Primary', 'tnd' )
+            'primary' => esc_html__( 'Primary', 'tnd' ),
+            'home' => esc_html__( 'Home', 'tnd' )
         ) );
     }
     add_action ( 'init', 'tnd_setup' );
+
+    add_editor_style( array( 'css/editor-style.css' ) );
 
 endif;
 

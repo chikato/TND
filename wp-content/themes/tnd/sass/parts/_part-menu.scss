@@ -99,6 +99,29 @@
   @include icon(30px);
 }
 
+#menu.black-menu {
+  >button {
+    >span {
+      background: $black;
+
+      &:before, &:after {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
 #nav {
   position: fixed;
   width: 100vw;
@@ -106,17 +129,6 @@
   z-index: 1000;
   background: #1B2838;
   display: none;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: $white;
-  }
 
   .menu {
     >li {
@@ -130,6 +142,44 @@
           color: $hoverColor;
         }
       }
+    }
+  }
+}
+
+.menu-home {
+  position: relative;
+
+  >li {
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      &:before {
+        width: 5px;
+        height: 5px;
+        content: "";
+        background: #fff;
+        position: absolute;
+        border-radius: 50%;
+        left: -5px;
+        top: 15px;
+      }
+    }
+
+    &:hover {
+      a {
+        color: $hoverColor;
+      }
+    }
+  }
+}
+
+@media #{$mobile} {
+  .menu-home {
+    >li a {
+      font-size: $baseFontSize;
     }
   }
 }

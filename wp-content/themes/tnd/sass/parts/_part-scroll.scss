@@ -31,7 +31,7 @@
 .scroll-down, .scroll-up {
   position: absolute;
   left: 50%;
-  bottom: 100px;
+  bottom: 85px;
   width: 150px;
   cursor: pointer;
   @include translate(-50%, 0);
@@ -40,7 +40,7 @@
   .scroll-text {
     text-transform: uppercase;
     text-align: center;
-    font-size: $textFontSize;
+    font-size: 12px;
     opacity: 1;
 
     &:hover {
