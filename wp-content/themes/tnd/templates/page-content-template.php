@@ -16,7 +16,7 @@ get_header();
             <div class="mask fp-table">
                 <div class="fp-tableCell">
                     <div class="content">
-                        <h1>executive</h1>
+                        <h1><?php wp_title(""); ?></h1>
                         <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>

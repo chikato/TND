@@ -44,7 +44,7 @@
                     <div class="content">
                         <h1>philanthropist</h1>
                         <?php get_template_part("parts/part", "view-more"); ?>
-                        <?php get_template_part("parts/part", "scroll-down"); ?>
+                        <?php get_template_part("parts/part", "scroll-up"); ?>
                     </div>
                 </div>
             </div>
