@@ -1,30 +1,88 @@
+@mixin arrow($name, $deg) {
+  @-webkit-keyframes arrow-#{$name} {
+    0% {
+      transform: rotate($deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate($deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes arrow-#{$name} {
+    0% {
+      transform: rotate($deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate($deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+}
+
 .scroll-down, .scroll-up {
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 100px;
   width: 150px;
+  cursor: pointer;
   @include translate(-50%, 0);
   @include selectable(none);
 
   .scroll-text {
-      text-transform: uppercase;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: $textFontSize;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.5;
+      @include transition(opacity 0.3);
+    }
   }
 
   .scroll-icon {
-    background: url("../img/common/scroll_down_icon.png") no-repeat center center;
-    height: 50px;
-    background-size: 50px 50px;
-  }
-}
+    position: relative;
 
-.scroll-down {
-  .scroll-icon {
-
+    span {
+      position: absolute;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 1px solid $white;
+      border-bottom: 1px solid $white;
+      @include box-sizing(border-box);
+    }
   }
 }
 
 .scroll-up {
+  @include arrow("up", 135deg);
+
   .scroll-icon {
-    @include transform(rotate(180deg));
+    span {
+      top: -34px;
+      @include animation(arrow-up 1.5s infinite);
+    }
+  }
+}
+
+.scroll-down {
+  @include arrow("down", -45deg);
+
+  .scroll-icon {
+    span {
+      top: -10px;
+      @include animation(arrow-down 1.5s infinite);
+    }
   }
 }

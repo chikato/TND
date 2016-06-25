@@ -11,9 +11,8 @@ get_header();
 
 <div class="block">
     <div id="fullpage" class="page">
-        <section class="section">
-            <?php echo get_the_post_thumbnail(); ?>
-            <div class="mask fp-table">
+        <section class="section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
+            <div class="mask fp-table container">
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1><?php wp_title(""); ?></h1>
@@ -23,7 +22,7 @@ get_header();
             </div>
         </section>
         <section class="section fp-table">
-            <div class="fp-tableCell">
+            <div class="fp-tableCell container">
                 <div class="content">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <div class="page-content">

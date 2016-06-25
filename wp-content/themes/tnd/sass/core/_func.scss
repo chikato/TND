@@ -117,3 +117,17 @@
   -moz-appearance: $value;
   appearance: $value;
 }
+
+@mixin bg-size($val) {
+  -moz-background-size: $val;
+  -o-background-size: $val;
+  -webkit-background-size: $val;
+  background-size: $val;
+}
+
+@mixin animation($value) {
+  -moz-animation: $value;
+  -o-animation: $value;
+  -webkit-animation: $value;
+  animation: $value;
+}

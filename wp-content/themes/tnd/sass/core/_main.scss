@@ -42,3 +42,23 @@
     font-size: 70px;
   }
 }
+
+.container {
+  padding: 5% 10%;
+}
+
+@media #{$tablet} {
+  .content {
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .content {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}

@@ -4,4 +4,25 @@
   text-decoration: none;
   cursor: pointer;
   @include selectable(none);
+  @include transition(background 0.3s);
+
+  &:hover {
+    background: $white;
+
+    >span {
+      color: $hoverColor;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .view-more {
+    font-size: $baseFontSize;
+  }
+}
+
+@media #{$mobile} {
+  .view-more {
+    font-size: $textFontSize;
+  }
 }
