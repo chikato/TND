@@ -10,6 +10,20 @@
   @include flex;
 }
 
+.table-center {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  >* {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 .mask {
   background: rgba(0, 0, 0, 0.4);
   height: 100vh;

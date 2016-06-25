@@ -2,11 +2,14 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /tnd/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /tnd/index.php [L]
+RewriteRule . /index.php [L]
+
+RewriteRule ^(/)?login/?$ /wp-login.php [QSA,L]
+
 </IfModule>
 
 # END WordPress

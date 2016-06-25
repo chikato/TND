@@ -1,0 +1,135 @@
+@mixin icon($top: 0) {
+  position: absolute;
+  right: 30px;
+  top: $top;
+  height: 62px;
+  z-index: 9999;
+  pointer-events: all;
+  visibility: visible;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  transition: all 800ms;
+  @include selectable(none);
+
+  >button {
+    background-color: transparent;
+    -webkit-backface-visibility: hidden;
+    display: block;
+    overflow: hidden;
+    margin: -30px 0 0;
+    padding: 0;
+    width: 38px;
+    height: 65px;
+    font-size: 0;
+    text-indent: -9999px;
+    @include appearance(none);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    @include transition(background 0.3s);
+
+    &:focus {
+      outline: none;
+    }
+
+    >span {
+      display: block;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: $white;
+      content: "";
+      @include transition(background 0.2s);
+
+      &:before, &:after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $white;
+        content: "";
+        @include transition-duration(0.3s, 0.3s);
+        @include transition-delay(0.3s, 0s);
+      }
+
+      &:before {
+        top: -12px;
+        -webkit-transition-property: top, -webkit-transform;
+        transition-property: top, transform;
+        @include transition-property(top);
+      }
+
+      &:after {
+        bottom: -12px;
+        @include transition-property(bottom);
+      }
+    }
+  }
+
+  &.active >button {
+    background: transparent;
+
+    >span {
+      background: transparent;
+
+      &:before, &:after {
+        @include transition-delay(0s, 0.3s);
+      }
+
+      &:before {
+        background: $white;
+        top: 0;
+        @include transform(rotate(45deg));
+      }
+
+      &:after {
+        background: $white;
+        bottom: 0;
+        @include transform(rotate(-45deg));
+      }
+    }
+  }
+}
+
+#menu {
+  @include icon(30px);
+}
+
+#nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: #1B2838;
+  display: none;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .menu {
+    >li {
+      padding: 20px;
+      font-size: 40px;
+
+      &:hover {
+        background: $white;
+
+        a {
+          color: $hoverColor;
+        }
+      }
+    }
+  }
+}

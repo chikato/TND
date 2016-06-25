@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part("parts/part", "menu"); ?>
 <div class="block">
     <div id="fullpage">
         <section class="section" id="section1">

@@ -1,7 +1,10 @@
 (function ($) {
-    var SECTION = ".section"; 
+    var SECTION = ".section";
+    var $menu, $nav;
     
     $(document).ready(function() {
+        $menu = $("#menu");
+        $nav = $("#nav");
         $site.init();
     });
 
@@ -9,6 +12,7 @@
         init: function () {
             this._initFullPage();
             this._initScrolling();
+            this._initMenu();
         },
 
         _initFullPage: function () {
@@ -33,6 +37,14 @@
         _initScrolling: function () {
             $(".scroll-down").click($.fn.fullpage.moveSectionDown);
             $(".scroll-up").click($.fn.fullpage.moveSectionUp);
+        },
+
+        _initMenu: function () {
+            $menu.click(function (e) {
+                e.preventDefault();
+                $menu.toggleClass("active");
+                $nav.toggle();
+            });
         }
     }
 })(jQuery);
