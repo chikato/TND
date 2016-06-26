@@ -26,11 +26,14 @@
 
             foreach ( $pages as $page ) {
                 $index++;
-                if (has_post_thumbnail($page->ID)) {
-                    $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($page->ID),'thumbnail-size', true)[0];
-                } else {
-                    $thumb_url = "";
-                }
+
+                if(get_post_meta($page->ID, 'is_available', true)) {
+                    if (has_post_thumbnail($page->ID)) {
+                        $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($page->ID),'thumbnail-size', true)[0];
+                    } else {
+                        $thumb_url = "";
+                    }
+
             ?>
         <section class="section" id="section<?php echo $index + 1; ?>"  style="background: url('<?php echo $thumb_url; ?>')">
             <div class="mask fp-table container">
@@ -45,15 +48,15 @@
                     </div>
                 </div>
                 <?php
-                if($index == $length) {
-                    get_template_part("parts/part", "scroll-up");
-                } else {
-                    get_template_part("parts/part", "scroll-down");
-                }
+                    if($index == $length) {
+                        get_template_part("parts/part", "scroll-up");
+                    } else {
+                        get_template_part("parts/part", "scroll-down");
+                    }
                 ?>
             </div>
         </section>
-        <?php } ?>
+        <?php }} ?>
     </div>
 </div>
 
