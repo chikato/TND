@@ -20,14 +20,19 @@
             </div>
         </section>
         <?php
-            $pages  = get_pages( array( 'sort_column' => 'menu_order' ) );
+            $pages  = get_pages(
+                array( 'sort_column' => 'menu_order',
+                        'meta_key'	=> "is_available",
+                        'meta_value'	=> true
+                     )
+            );
             $length = count($pages);
             $index = 0;
 
             foreach ( $pages as $page ) {
                 $index++;
 
-                if(get_post_meta($page->ID, 'is_available', true)) {
+//                if(get_post_meta($page->ID, "is_available", true)) {
                     if (has_post_thumbnail($page->ID)) {
                         $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($page->ID),'thumbnail-size', true)[0];
                     } else {
@@ -56,7 +61,9 @@
                 ?>
             </div>
         </section>
-        <?php }} ?>
+        <?php
+         //   }
+         }?>
     </div>
 </div>
 

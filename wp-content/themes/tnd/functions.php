@@ -44,13 +44,13 @@ endif;
 
 function tnd_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'tnd' ),
-        'id'            => 'sidebarMain',
+        'name'          => esc_html__( 'Content SideBar', 'tnd' ),
+        'id'            => 'main-sidebar',
         'description'   => '',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'after_title'   => '</h2>'
     ) );
 }
 add_action( 'widgets_init', 'tnd_widgets_init' );
@@ -81,5 +81,3 @@ function tnd_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'tnd_scripts' );
-
-

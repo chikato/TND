@@ -47,6 +47,7 @@
         _initMenu: function () {
             $menu.click(function (e) {
                 e.preventDefault();
+                $nav.width() ? $.fn.fullpage.setAllowScrolling(true) : $.fn.fullpage.setAllowScrolling(false);
                 $menu.toggleClass("active");
                 $nav.toggle();
             });
