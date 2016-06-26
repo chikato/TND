@@ -83,6 +83,3 @@ function tnd_scripts() {
 add_action( 'wp_enqueue_scripts', 'tnd_scripts' );
 
 
-?>
-
-
