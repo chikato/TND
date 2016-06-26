@@ -48,9 +48,15 @@ function tnd_widgets_init() {
         'id'            => 'main-sidebar',
         'description'   => '',
         'before_widget' => '<section id="%1$s" class="widget instagram %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>'
+        'after_widget'  => '</section>'
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Contact SideBar', 'tnd' ),
+        'id'            => 'contact-sidebar',
+        'description'   => '',
+        'before_widget' => '<div id="%1$s" class="widget contact-btn %2$s">',
+        'after_widget'  => '</div>'
     ) );
 }
 add_action( 'widgets_init', 'tnd_widgets_init' );

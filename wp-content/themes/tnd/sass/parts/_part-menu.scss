@@ -162,7 +162,7 @@
         content: "";
         background: #fff;
         position: absolute;
-        border-radius: 50%;
+        @include border-radius(50%);
         left: -5px;
         top: 15px;
       }

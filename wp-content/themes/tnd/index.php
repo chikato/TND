@@ -18,6 +18,9 @@
                     </div>
                 </div>
             </div>
+            <div class="banner-sidebar">
+                <?php get_sidebar("contact") ?>
+            </div>
         </section>
         <?php
             $pages  = get_pages(

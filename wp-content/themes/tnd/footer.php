@@ -1,6 +1,6 @@
 <footer id="footer">
     <div class="copyright">
-        © <?php echo date('Y'); ?> <?php bloginfo( 'sitename' ); ?>. <?php _e('All rights reserved', 'tnd'); ?>.
+<!--        © --><?php //echo date('Y'); ?><!-- --><?php //bloginfo( 'sitename' ); ?><!--. --><?php //_e('All rights reserved', 'tnd'); ?><!--.-->
     </div>
 </footer>
 </div></div></div>

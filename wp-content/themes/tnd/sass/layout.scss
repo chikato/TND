@@ -2,14 +2,15 @@
 @import "core/_func.scss";
 @import "core/_reset.scss";
 @import "core/_main.scss";
-@import "core/_editor.scss";
 
-@import "parts/_part-header";
-@import "parts/_part-footer";
-@import "parts/_part-banner";
-@import "parts/_part-scroll";
-@import "parts/_part-view-more";
-@import "parts/_part-menu";
+@import "parts/_editor.scss";
+@import "parts/_part-header.scss";
+@import "parts/_part-footer.scss";
+@import "parts/_part-contact.scss";
+@import "parts/_part-scroll.scss";
+@import "parts/_part-view-more.scss";
+@import "parts/_part-menu.scss";
+@import "parts/_part-contact.scss";
 
 @import "pages/_page-home.scss";
 @import "pages/_page-content.scss";

@@ -20,6 +20,9 @@ get_header();
                     </div>
                 </div>
             </div>
+            <div class="banner-sidebar">
+                <?php get_sidebar("contact") ?>
+            </div>
         </section>
         <section class="content-wrapper">
             <div class="container">
