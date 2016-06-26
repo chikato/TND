@@ -8,3 +8,20 @@
   max-width: 640px;
   margin: 0 auto;
 }
+
+.instagram {
+  >h2 {
+    display: none;
+  }
+
+  >ul {
+    @include flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    >li {
+      width: 25%;
+    }
+  }
+}

@@ -47,7 +47,7 @@ function tnd_widgets_init() {
         'name'          => esc_html__( 'Content SideBar', 'tnd' ),
         'id'            => 'main-sidebar',
         'description'   => '',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'before_widget' => '<section id="%1$s" class="widget instagram %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>'

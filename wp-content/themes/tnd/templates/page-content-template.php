@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <div class="block">
-    <div id="fullpage" class="page">
+    <div class="page">
         <section class="section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
             <div class="mask fp-table container">
                 <div class="fp-tableCell">
@@ -21,25 +21,17 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="section fp-table">
-            <div class="fp-tableCell container">
-                <div class="content">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="page-content">
-                            <?php the_content(); ?>
-                        </div>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
+        <section class="content-wrapper">
+            <div class="container">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <div class="page-content">
+                        <?php the_content(); ?>
+                    </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </section>
-        <section class="section">
-            <div class="flex">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </section>
+        <?php get_sidebar() ?>
     </div>
 </div>
 
