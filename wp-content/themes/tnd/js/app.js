@@ -17,9 +17,8 @@
 
         _initFullPage: function () {
             $('#fullpage').fullpage({
-                verticalCentered: false,
+                verticalCentered: true,
                 css3: true,
-                resize: false,
                 scrollingSpeed: 1000,
                 navigation: true,
                 navigationPosition: 'right',
@@ -33,6 +32,19 @@
                     }), $menu.addClass("black-menu")) :
                         ($("#fp-nav span").css({"background": ""}),
                         $menu.removeClass("black-menu"));
+                }
+            });
+
+            $("#page").fullpage({
+                css3: true,
+                scrollingSpeed: 1000,
+                scrollOverflow: true,
+                scrollOverflowOptions: {
+                    scrollbars: true,
+                    mouseWheel: true,
+                    hideScrollbars: false,
+                    fadeScrollbars: false,
+                    disableMouse: true
                 }
             });
         },

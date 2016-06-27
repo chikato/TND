@@ -92,7 +92,8 @@ html.fp-enabled,
     }
 }
 .fp-scrollable {
-    overflow: scroll;
+    overflow: hidden;
+    position: relative;
 }
 .fp-notransition {
     -webkit-transition: none !important;

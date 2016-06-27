@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <div class="block">
-    <div class="page">
+    <div class="page" id="page">
         <section class="section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
             <div class="mask fp-table container">
                 <div class="fp-tableCell">
@@ -24,7 +24,7 @@ get_header();
                 <?php get_sidebar("contact") ?>
             </div>
         </section>
-        <section class="content-wrapper">
+        <section class="section content-wrapper">
             <div class="container">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="page-content">
@@ -33,8 +33,8 @@ get_header();
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
+            <?php get_sidebar(); ?>
         </section>
-        <?php get_sidebar() ?>
     </div>
 </div>
 

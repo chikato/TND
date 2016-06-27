@@ -47,8 +47,8 @@ function tnd_widgets_init() {
         'name'          => esc_html__( 'Content SideBar', 'tnd' ),
         'id'            => 'main-sidebar',
         'description'   => '',
-        'before_widget' => '<section id="%1$s" class="widget instagram %2$s">',
-        'after_widget'  => '</section>'
+        'before_widget' => '<div id="%1$s" class="widget instagram %2$s">',
+        'after_widget'  => '</div>'
     ) );
 
     register_sidebar( array(
@@ -64,11 +64,13 @@ add_action( 'widgets_init', 'tnd_widgets_init' );
 function tnd_scripts() {
     // add wordpress jquery
     wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-ui-core');
 
     $path = get_template_directory_uri();
 
     // custom js
     $scripts = array(
+        '/js/lib/scrolloverflow.min.js',
         '/js/lib/jquery.fullPage.min.js',
         '/js/app.js'
     );
