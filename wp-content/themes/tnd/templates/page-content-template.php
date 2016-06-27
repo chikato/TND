@@ -11,7 +11,7 @@ get_header();
 
 <div class="block">
     <div class="page" id="page">
-        <section class="section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
+        <section class="section main-section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
             <div class="mask fp-table container">
                 <div class="fp-tableCell">
                     <div class="content">
@@ -33,8 +33,8 @@ get_header();
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <?php get_sidebar(); ?>
         </section>
+        <?php get_sidebar(); ?>
     </div>
 </div>
 

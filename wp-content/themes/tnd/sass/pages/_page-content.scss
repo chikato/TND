@@ -9,6 +9,12 @@
   margin: 0 auto;
 }
 
+.main-section {
+  .iScrollVerticalScrollbar {
+    display: none;
+  }
+}
+
 .instagram {
   >h2 {
     display: none;
