@@ -1,0 +1,25 @@
+.editor {
+  h3 {
+    color: $hoverColor;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  * {
+    font-size: $baseFontSize;
+    color: $black;
+    text-align: justify;
+  }
+
+  .contact-content >* {
+    text-align: center;
+  }
+
+  .contact-label {
+
+  }
+
+  .contact-detail {
+    color: $hoverColor;
+  }
+}
