@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <div class="block">
-    <div class="page">
+    <div class="page" id="fullpage">
         <section class="section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
             <div class="mask fp-table container">
                 <div class="fp-tableCell">
@@ -24,15 +24,15 @@ get_header();
                 <?php get_sidebar("contact") ?>
             </div>
         </section>
-        <section class="content-wrapper">
-            <div class="container">
+        <section class="section content-wrapper">
+            <div class="container table-center">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="page-content">
                         <?php the_content(); ?>
+                        <div class="social-contact"></div>
                     </div>
                 <?php endwhile; ?>
                 <?php endif; ?>
-                <div><?php get_sidebar("contact") ?></div>
             </div>
         </section>
     </div>

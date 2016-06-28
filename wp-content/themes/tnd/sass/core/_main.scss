@@ -1,6 +1,6 @@
 * {
   font-family: $font-family-base;
-  color: $white;
+  color: $textColor;
 }
 
 .clearfix {
@@ -40,12 +40,23 @@
 
   h1 {
     text-transform: uppercase;
-    font-size: 70px;
   }
 }
 
 .container {
   padding: 5% 10%;
+}
+
+@media #{$desktop_large} {
+  .content h1 {
+    font-size: 90px;
+  }
+}
+
+@media #{$desktop_small} {
+  .content h1 {
+    font-size: 70px;
+  }
 }
 
 @media #{$tablet} {

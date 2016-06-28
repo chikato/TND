@@ -33,6 +33,7 @@
   left: 50%;
   width: 150px;
   cursor: pointer;
+  z-index: 3;
   @include translate(-50%, 0);
   @include selectable(none);
 

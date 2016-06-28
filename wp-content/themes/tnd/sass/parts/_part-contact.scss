@@ -1,13 +1,25 @@
 .banner-sidebar {
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 60px;
+  bottom: 40px;
+  z-index: 3;
 
   .sfmsb-horizontal >a {
     float: none;
   }
 }
 
-.contact-sidebar {
+.social-contact {
+  [class^="sfmsb-icon-"], [class*=" sfmsb-icon-"] {
+    color: $textColor !important;
+  }
 
+  .widget {
+    margin: 0 auto;
+    display: table;
+  }
+
+  .sfmsb-follow-social-buttons.sfmsb-under a {
+    margin-right: 25px;
+  }
 }

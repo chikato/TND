@@ -13,6 +13,7 @@
             this._initFullPage();
             this._initScrolling();
             this._initMenu();
+            this._cloneContact();
         },
 
         _initFullPage: function () {
@@ -37,8 +38,9 @@
 
             $("#page").fullpage({
                 css3: true,
-                scrollingSpeed: 1000,
-                normalScrollElements: [".content-wrapper"]
+                scrollingSpeed: 1000
+                // ,
+                // normalScrollElements: [".content-wrapper"]
                 // scrollOverflow: true,
                 // scrollOverflowOptions: {
                 //     scrollbars: true,
@@ -64,6 +66,17 @@
                 $menu.toggleClass("active");
                 $nav.toggle();
             });
+        },
+
+        _cloneContact: function () {
+            var $socialWrapper = $(".social-contact");
+            var $socialIcons = $($(".banner-sidebar").html()).attr("id", "");
+
+            if($socialWrapper.length) {
+                $socialIcons.find('[class^="sfmsb-icon-"], [class*=" sfmsb-icon-"]')
+                    .css({"color": ""});
+                $socialWrapper.append($socialIcons);
+            }
         }
     }
 })(jQuery);

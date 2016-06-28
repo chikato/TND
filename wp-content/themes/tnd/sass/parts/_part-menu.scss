@@ -1,6 +1,6 @@
 @mixin icon($top: 0) {
   position: absolute;
-  right: 30px;
+  right: 60px;
   top: $top;
   height: 62px;
   z-index: 9999;
@@ -148,6 +148,7 @@
 
 .menu-home {
   position: relative;
+  font-weight: bold;
 
   >li {
     display: inline-block;
@@ -176,10 +177,26 @@
   }
 }
 
+@media #{$desktop_large} {
+  .menu-home {
+    font-size: 22px;
+  }
+}
+
+@media #{$desktop_small} {
+  .menu-home {
+    font-size: 18px;
+  }
+}
+
+@media #{$tablet} {
+  .menu-home {
+
+  }
+}
+
 @media #{$mobile} {
   .menu-home {
-    >li a {
-      font-size: $baseFontSize;
-    }
+    font-size: $baseFontSize;
   }
 }
