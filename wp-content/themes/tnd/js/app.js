@@ -17,7 +17,7 @@
 
         _initFullPage: function () {
             $('#fullpage').fullpage({
-                verticalCentered: true,
+                verticalCentered: false,
                 css3: true,
                 scrollingSpeed: 1000,
                 navigation: true,
@@ -38,14 +38,15 @@
             $("#page").fullpage({
                 css3: true,
                 scrollingSpeed: 1000,
-                scrollOverflow: true,
-                scrollOverflowOptions: {
-                    scrollbars: true,
-                    mouseWheel: true,
-                    hideScrollbars: false,
-                    fadeScrollbars: false,
-                    disableMouse: true
-                }
+                normalScrollElements: [".content-wrapper"]
+                // scrollOverflow: true,
+                // scrollOverflowOptions: {
+                //     scrollbars: true,
+                //     mouseWheel: true,
+                //     hideScrollbars: false,
+                //     fadeScrollbars: false,
+                //     disableMouse: true
+                // }
             });
         },
 

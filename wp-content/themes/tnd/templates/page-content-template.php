@@ -16,10 +16,10 @@ get_header();
                 <div class="fp-tableCell">
                     <div class="content">
                         <h1><?php wp_title(""); ?></h1>
-                        <?php get_template_part("parts/part", "scroll-down"); ?>
                     </div>
                 </div>
             </div>
+            <?php get_template_part("parts/part", "scroll-down"); ?>
             <div class="banner-sidebar">
                 <?php get_sidebar("contact") ?>
             </div>
