@@ -10,8 +10,8 @@ get_header();
 ?>
 
 <div class="block">
-    <div class="page" id="page">
-        <section class="section main-section" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
+    <div class="page" id="fullpage">
+        <section class="section main-section fp-auto-height" style="background: url('<?php the_post_thumbnail_url('full'); ?>')">
             <div class="mask fp-table container">
                 <div class="fp-tableCell">
                     <div class="content">
@@ -24,7 +24,7 @@ get_header();
                 <?php get_sidebar("contact") ?>
             </div>
         </section>
-        <section class="section content-wrapper">
+        <section class="section content-wrapper normal">
             <div class="container">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="page-content">

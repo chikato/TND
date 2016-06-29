@@ -23,6 +23,14 @@
                 scrollingSpeed: 1000,
                 navigation: true,
                 navigationPosition: 'right',
+                scrollOverflow: true,
+                scrollOverflowOptions: {
+                    scrollbars: true,
+                    mouseWheel: true,
+                    hideScrollbars: false,
+                    fadeScrollbars: false,
+                    disableMouse: true
+                },
 
                 //change navigation background when scrolling
                 onLeave: function (index, nextIndex, direction) {
@@ -34,21 +42,6 @@
                         ($("#fp-nav span").css({"background": ""}),
                         $menu.removeClass("black-menu"));
                 }
-            });
-
-            $("#page").fullpage({
-                css3: true,
-                scrollingSpeed: 1000
-                // ,
-                // normalScrollElements: [".content-wrapper"]
-                // scrollOverflow: true,
-                // scrollOverflowOptions: {
-                //     scrollbars: true,
-                //     mouseWheel: true,
-                //     hideScrollbars: false,
-                //     fadeScrollbars: false,
-                //     disableMouse: true
-                // }
             });
         },
 
